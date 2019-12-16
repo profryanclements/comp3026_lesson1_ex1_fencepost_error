@@ -1,5 +1,5 @@
 package com.georgiancollege.ryanclements.comp3026.lesson1.ex1;
-import java.awt.*;
+import java.awt.Color;
 
 class FenceSection {
     private Color color;

@@ -8,7 +8,7 @@ public class MainJFrame extends JFrame {
     private int windowHeightInPixels;
 
     // Create the fence object
-    private FlawedFence flawedFence = new FlawedFence();
+    private transient FlawedFence flawedFence = new FlawedFence();
 
     private MainJFrame()
     {
@@ -23,7 +23,7 @@ public class MainJFrame extends JFrame {
         setTitle("Drawing a Flawed Fence");
         setSize(windowWidthInPixels, windowHeightInPixels);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {

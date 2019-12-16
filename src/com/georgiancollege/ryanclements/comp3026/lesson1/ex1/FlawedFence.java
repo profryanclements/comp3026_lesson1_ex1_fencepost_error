@@ -1,13 +1,15 @@
 package com.georgiancollege.ryanclements.comp3026.lesson1.ex1;
 
-class FlawedFence {
+import java.io.Serializable;
+
+class FlawedFence implements Serializable {
     // 30 meters / 3 meters apart = 10 fence posts required
     private int requiredFencePosts = 10;
-    FencePost[] fencePosts = new FencePost[requiredFencePosts];
+    transient FencePost[] fencePosts = new FencePost[requiredFencePosts];
 
     // 30 meters / 3 meters apart = 10 fence sections required
     private int requiredSectionsofFence = 10;
-    FenceSection[] fenceSections = new FenceSection[requiredSectionsofFence];
+    transient FenceSection[] fenceSections = new FenceSection[requiredSectionsofFence];
 
     FlawedFence() {
         // create the fence posts
